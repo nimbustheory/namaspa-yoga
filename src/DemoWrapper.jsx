@@ -12,7 +12,7 @@ export default function DemoWrapper() {
   if (isMobile) return <App />;
 
   return (
-    <div style={{ display: "flex", minHeight: "100vh", background: "#f5f3f0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
+    <div style={{ display: "flex", height: "100vh", overflow: "hidden", background: "#f5f3f0", fontFamily: "'DM Sans', system-ui, sans-serif" }}>
       {/* LEFT SIDEBAR */}
       <aside style={{ width: 320, flexShrink: 0, position: "fixed", top: 0, left: 0, bottom: 0, overflowY: "auto", padding: "32px 28px", borderRight: "1px solid #e5e0d8" }}>
         <p style={{ fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", color: config.accent, textTransform: "uppercase", marginBottom: 20 }}>PROTOTYPE DEMO</p>
@@ -44,11 +44,9 @@ export default function DemoWrapper() {
       </aside>
 
       {/* CENTER — PHONE FRAME */}
-      <div style={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "flex-start", marginLeft: 320, marginRight: 340, paddingTop: 24, paddingBottom: 24 }}>
-        <div style={{ width: 390, minHeight: "100vh", position: "sticky", top: 24, background: "#fff", borderRadius: 20, boxShadow: "0 8px 40px rgba(0,0,0,.12), 0 1px 3px rgba(0,0,0,.08)", overflow: "hidden", transform: "translateZ(0)" }}>
-          <div style={{ height: "calc(100vh - 48px)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
-            <App />
-          </div>
+      <div style={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "center", marginLeft: 320, marginRight: 340 }}>
+        <div style={{ width: 390, height: "calc(100vh - 48px)", background: "#fff", borderRadius: 20, boxShadow: "0 8px 40px rgba(0,0,0,.12), 0 1px 3px rgba(0,0,0,.08)", overflow: "hidden", transform: "translateZ(0)", display: "flex", flexDirection: "column" }}>
+          <App />
         </div>
       </div>
 
