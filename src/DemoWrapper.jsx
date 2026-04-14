@@ -46,7 +46,7 @@ export default function DemoWrapper() {
       {/* CENTER — PHONE FRAME */}
       <div style={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "flex-start", marginLeft: 320, marginRight: 340, paddingTop: 24, paddingBottom: 24 }}>
         <div style={{ width: 390, minHeight: "100vh", position: "sticky", top: 24, background: "#fff", borderRadius: 20, boxShadow: "0 8px 40px rgba(0,0,0,.12), 0 1px 3px rgba(0,0,0,.08)", overflow: "hidden", transform: "translateZ(0)" }}>
-          <div style={{ height: "calc(100vh - 48px)", overflow: "auto" }}>
+          <div style={{ height: "calc(100vh - 48px)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
             <App />
           </div>
         </div>
